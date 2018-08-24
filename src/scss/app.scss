@@ -1,0 +1,25 @@
+$baseline: 8px;
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.blade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: $baseline * 2;
+
+    .blade__content {
+        text-align: center;
+    }
+
+    .blade-action {
+        background-color: #f5f5f5;
+        border: 1px solid #cccccc;
+        padding: 10px;
+        font-size: 16px;
+        min-width: 200px;
+    }
+}
