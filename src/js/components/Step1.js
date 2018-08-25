@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {STEP_1} from '../BladeConstants';
+import {STEP_1} from '../constants/BladeConstants';
 import Blade from './Blade';
+import BladeTitle from './BladeTitle';
 
 export class Step1 extends React.Component {
     onAnswer() {
@@ -15,13 +16,13 @@ export class Step1 extends React.Component {
             <Blade id={STEP_1}>
                 <div className="row">
                     <div className="col-12">
-                        <h1>Step 1</h1>
+                        <BladeTitle label="Step 1" />
                         <button
                           type="button"
                           className="blade-action"
                           onClick={() => this.onAnswer()}
                         >
-                            Next
+                            Lets start!
                         </button>
                     </div>
                 </div>

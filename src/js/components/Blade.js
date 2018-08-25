@@ -1,19 +1,32 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import ReactDOM from 'react-dom';
 
-const Blade = function ({id, className, children}) {
-    const classes = ['blade'];
-
-    if (className) {
-        classes.push(className);
+export default class Blade extends React.Component {
+    componentDidMount() {
+        setTimeout(() => {
+            // find focusable element
+            // this should be generalised to be any sort of interactive element
+            const node = ReactDOM.findDOMNode(this);
+            node.querySelector('.blade__title').focus();
+        }, 300);
     }
-    return (
-        <div id={id} className={classes.join(' ')}>
-            <div className="blade__content">
-                {children}
+
+    render() {
+        const classes = ['blade'];
+        const {id, className, children} = this.props;
+
+        if (className) {
+            classes.push(className);
+        }
+        return (
+            <div id={id} className={classes.join(' ')}>
+                <div className="blade__content">
+                    {children}
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
 };
 
 Blade.defaultProps = {
@@ -26,5 +39,3 @@ Blade.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string
 };
-
-export default Blade;

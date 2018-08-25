@@ -1,9 +1,9 @@
 import React from 'react';
 
-import {STEP_1} from '../BladeConstants';
+import {STEP_1} from '../constants/BladeConstants';
 import {scrollBodyTo} from '../utils/Scroll';
-import {answerQuestion, nextQuestion} from '../Typeform';
-import Sequence from '../Sequence';
+import {answerQuestion, nextQuestion} from '../typeform/Typeform';
+import Sequence from '../typeform/Sequence';
 import Blades from '.';
 
 function scrollPage(id) {
@@ -47,6 +47,7 @@ class Questions extends React.Component {
     render() {
         return (
             <main className="app">
+                <header>Typeform</header>
                 <div className="app__content">
                     {this.renderContent()}
                 </div>

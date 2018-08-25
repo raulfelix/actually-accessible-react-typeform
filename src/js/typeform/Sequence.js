@@ -1,4 +1,4 @@
-import {STEP_1, STEP_2, STEP_3} from "./BladeConstants";
+import {STEP_1, STEP_2, STEP_3} from "../constants/BladeConstants";
 
 const step1 = {
     id: STEP_1,

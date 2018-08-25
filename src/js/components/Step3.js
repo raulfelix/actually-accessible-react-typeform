@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {STEP_3} from '../BladeConstants';
+import {STEP_3} from '../constants/BladeConstants';
 import Blade from './Blade';
+import BladeTitle from './BladeTitle';
 
 export class Step3 extends React.Component {
     render() {
@@ -10,7 +11,7 @@ export class Step3 extends React.Component {
             <Blade id={STEP_3}>
                 <div className="row">
                     <div className="col-12">
-                        <h1>Step 3</h1>
+                        <BladeTitle label="Step 3" />
                     </div>
                 </div>
             </Blade>
